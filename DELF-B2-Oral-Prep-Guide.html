@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DELF B2 — Oral Production | Study Guide</title>
+  <style>
+    :root {
+      --ink: #1a1a2e;
+      --muted: #4a4a68;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --border: #e2e8f0;
+      --paper: #fafaf9;
+      --success: #166534;
+      --warning: #b45309;
+      --danger: #b91c1c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Georgia, serif;
+      line-height: 1.65;
+      color: var(--ink);
+      background: #e8e6e3;
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+    .book {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      box-shadow: 0 4px 24px rgba(0,0,0,.12);
+    }
+    .cover {
+      background: var(--ink);
+      color: #fff;
+      padding: 3.5rem 2.5rem;
+      page-break-after: always;
+    }
+    .cover .label { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; opacity: .7; }
+    .cover h1 { font-size: 2.25rem; font-weight: 700; margin: .5rem 0 1rem; line-height: 1.2; }
+    .cover p { opacity: .85; max-width: 32rem; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; }
+    .stat { background: rgba(255,255,255,.08); padding: 1rem; border-radius: 6px; text-align: center; }
+    .stat strong { display: block; font-size: 1.35rem; }
+    .stat span { font-size: .7rem; opacity: .75; }
+    .content { padding: 2.5rem; }
+    .chapter {
+      border-left: 4px solid var(--accent);
+      padding-left: 1.25rem;
+      margin: 2.5rem 0 1.5rem;
+    }
+    .chapter-num { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+    .chapter h2 { margin: .25rem 0; font-size: 1.5rem; }
+    .chapter .sub { color: var(--muted); font-size: .95rem; margin: 0; }
+    h3 { font-size: 1.1rem; margin: 1.75rem 0 .75rem; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; font-size: .85rem; }
+    p { margin: 0 0 1rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .9rem; }
+    th, td { border: 1px solid var(--border); padding: .6rem .75rem; text-align: left; }
+    th { background: var(--accent-light); font-weight: 600; }
+    tr:nth-child(even) td { background: #f8fafc; }
+    .box { background: #f1f5f9; border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .box.success { border-left: 4px solid var(--success); background: #f0fdf4; }
+    .box.warning { border-left: 4px solid var(--warning); background: #fffbeb; }
+    .box.danger { border-left: 4px solid var(--danger); background: #fef2f2; }
+    .box.info { border-left: 4px solid var(--accent); background: var(--accent-light); }
+    .box strong { display: block; margin-bottom: .35rem; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+    .card { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .card-h { background: #f8fafc; padding: .6rem 1rem; font-weight: 600; font-size: .9rem; border-bottom: 1px solid var(--border); }
+    .card-b { padding: 1rem; font-size: .9rem; }
+    .step { display: flex; gap: 1rem; margin: 1.25rem 0; }
+    .step-num {
+      width: 28px; height: 28px; background: var(--accent); color: #fff;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: .85rem; flex-shrink: 0;
+    }
+    .phrase { font-style: italic; color: var(--muted); font-size: .88rem; margin: .25rem 0; }
+    .toc { list-style: none; padding: 0; margin: 2rem 0; }
+    .toc li { padding: .4rem 0; border-bottom: 1px dotted var(--border); }
+    .toc a { color: var(--accent); text-decoration: none; }
+    .example { border: 1px solid var(--border); border-radius: 8px; margin: 1rem 0; }
+    .example summary { padding: .85rem 1rem; cursor: pointer; font-weight: 600; background: #f8fafc; }
+    .example .inner { padding: 1rem 1.25rem; font-size: .9rem; }
+    .tag { display: inline-block; font-size: .7rem; padding: .15rem .5rem; border-radius: 4px; background: #e2e8f0; margin-right: .35rem; }
+    .footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 2rem; border-top: 1px solid var(--border); }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .book { box-shadow: none; max-width: 100%; }
+      .cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .example { page-break-inside: avoid; }
+      .no-print { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="book">
+    <header class="cover">
+      <p class="label">Official preparation guide · CIEP / France Éducation International</p>
+      <h1>DELF B2 — Oral Production</h1>
+      <p>Exam format · Argumentation methods · Corrected examples · 8–12 week study plan · Annotated resources</p>
+      <div class="stats">
+        <div class="stat"><strong>20 min</strong><span>Face-to-face</span></div>
+        <div class="stat"><strong>30 min</strong><span>Preparation</span></div>
+        <div class="stat"><strong>50/100</strong><span>Min. score</span></div>
+        <div class="stat"><strong>5/25</strong><span>Min. per section</span></div>
+      </div>
+    </header>
+
+    <main class="content">
+      <p class="no-print" style="background:#fff3cd;padding:1rem;border-radius:8px;font-size:.9rem;">
+        <strong>Open this file:</strong> Double-click <code>DELF-B2-Oral-Prep-Guide.html</code> in your project folder.
+        To save as PDF: press <kbd>Ctrl+P</kbd> → choose “Save as PDF”.
+      </p>
+
+      <h3>Table of contents</h3>
+      <ul class="toc">
+        <li><a href="#ch1">Chapter 1 — The Official Exam</a></li>
+        <li><a href="#ch2">Chapter 2 — Methods &amp; Tools</a></li>
+        <li><a href="#ch3">Chapter 3 — Corrected Sample Speeches</a></li>
+        <li><a href="#ch4">Chapter 4 — Self-Evaluation Grid</a></li>
+        <li><a href="#ch5">Chapter 5 — Study Plan (8–12 weeks)</a></li>
+        <li><a href="#ch6">Chapter 6 — Annotated Resources</a></li>
+      </ul>
+
+      <section id="ch1">
+        <div class="chapter">
+          <p class="chapter-num">Chapter 1</p>
+          <h2>The Official Exam</h2>
+          <p class="sub">Format, structure and scoring criteria</p>
+        </div>
+
+        <h3>1.1 — The two parts</h3>
+        <div class="grid2">
+          <div class="card">
+            <div class="card-h">Part 1 — Extended Monologue <span class="tag">5–7 min</span></div>
+            <div class="card-b">
+              You receive a written document (article, interview, opinion piece). You must identify the key issue, present a clear structured opinion, and organize intro → development → conclusion. You choose 1 topic from 2.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-h">Part 2 — Interaction / Debate <span class="tag">10–13 min</span></div>
+            <div class="card-b">
+              The examiner asks questions. You must defend your view, nuance and concede when appropriate, and react with relevance and politeness.
+            </div>
+          </div>
+        </div>
+
+        <h3>1.2 — Official scoring (25 points)</h3>
+        <table>
+          <thead><tr><th>Criterion</th><th>Pts</th><th>What is assessed</th></tr></thead>
+          <tbody>
+            <tr><td>Task — Monologue</td><td>5</td><td>Clear problem, logical plan, 2–3 illustrated arguments</td></tr>
+            <tr><td>Task — Interaction</td><td>5</td><td>Responsiveness, defense and nuance</td></tr>
+            <tr><td>Vocabulary</td><td>5</td><td>Range, relevance, few repetitions</td></tr>
+            <tr><td>Grammar</td><td>5</td><td>Complex structures, rare errors</td></tr>
+            <tr><td>Pronunciation</td><td>5</td><td>Intelligibility, natural intonation, fluency</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box danger"><strong>Elimination rule</strong> At least 5/25 in each section and 50/100 overall — or you fail.</div>
+        <div class="box info"><strong>What examiners want</strong> Structured speech (not memorized), nuanced arguments with examples, natural communication, ability to react — not a perfect “correct” answer.</div>
+      </section>
+
+      <section id="ch2">
+        <div class="chapter">
+          <p class="chapter-num">Chapter 2</p>
+          <h2>Methods &amp; Tools</h2>
+          <p class="sub">Speech models, connectors and essential expressions</p>
+        </div>
+
+        <h3>2.1 — Monologue model (3 steps)</h3>
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <strong>Introduction (~1 min)</strong>
+            <p>Cite source · State problem · Announce plan</p>
+            <p class="phrase">« Cet article de [source] présente… On peut se demander si… J'aborderai d'abord X, puis Y. »</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <strong>Development (6–8 min)</strong>
+            <p>2–3 arguments with examples · Explicit transitions · Varied connectors</p>
+            <p class="phrase">« D'une part… D'autre part… Cependant… Par exemple… »</p>
+            <div class="box"><strong>Golden rule:</strong> Fully develop 2 arguments rather than listing 5 superficially.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <strong>Conclusion (~1 min)</strong>
+            <p>Answer the problem · Summarize opinion · Open perspective</p>
+            <p class="phrase">« En conclusion, pour ma part… Pour aller plus loin… »</p>
+          </div>
+        </div>
+
+        <h3>2.2 — Debate strategies</h3>
+        <table>
+          <thead><tr><th>Strategy</th><th>Example phrase</th></tr></thead>
+          <tbody>
+            <tr><td>Organized reply</td><td>« D'abord… Ensuite… Enfin… »</td></tr>
+            <tr><td>Partial agreement</td><td>« Je suis d'accord sur X, mais d'un autre côté… »</td></tr>
+            <tr><td>Nuancing</td><td>« Vous avez un point, cependant… / Certes, mais… »</td></tr>
+            <tr><td>Buying time</td><td>« C'est une bonne question, laissez-moi réfléchir… »</td></tr>
+            <tr><td>Clarifying</td><td>« Pouvez-vous préciser votre question ? »</td></tr>
+          </tbody>
+        </table>
+
+        <h3>2.3 — Connectors by category</h3>
+        <div class="grid3">
+          <div class="box"><strong>Introducing</strong> Premièrement, Pour commencer…</div>
+          <div class="box"><strong>Adding</strong> De plus, En outre, Par ailleurs…</div>
+          <div class="box"><strong>Opposing</strong> Cependant, Toutefois, En revanche…</div>
+          <div class="box"><strong>Illustrating</strong> Par exemple, Ainsi, Notamment…</div>
+          <div class="box"><strong>Conceding</strong> Certes, Il est vrai que, Bien que…</div>
+          <div class="box"><strong>Concluding</strong> En conclusion, En somme, Au final…</div>
+        </div>
+      </section>
+
+      <section id="ch3">
+        <div class="chapter">
+          <p class="chapter-num">Chapter 3</p>
+          <h2>Corrected Sample Speeches</h2>
+          <p class="sub">5 typical DELF B2 topics</p>
+        </div>
+
+        <details class="example" open>
+          <summary>Example 1 — Is school asking too much of parents?</summary>
+          <div class="inner">
+            <p><strong>Question:</strong> Should parents be more involved in schooling, or does this undermine teachers?</p>
+            <p><strong>Plan:</strong> Intro (La Croix) → Arg+ co-education / Scandinavia → Arg− parent overload → Conclusion: cooperation, not obligation</p>
+            <p><strong>Strengths:</strong> Clear intro, logical connectors, concession in debate.</p>
+          </div>
+        </details>
+        <details class="example">
+          <summary>Example 2 — Should remote work be encouraged?</summary>
+          <div class="inner">
+            <p><strong>Question:</strong> Beneficial or problematic for employees and society?</p>
+            <p><strong>Plan:</strong> Survey intro → economic/time gains → loneliness/blurred boundaries → Moderate framework (1–2 days/week)</p>
+          </div>
+        </details>
+        <details class="example">
+          <summary>Example 3 — Does technology increase stress?</summary>
+          <div class="inner">
+            <p><strong>Plan:</strong> Benefits (info, remote work) → Drawbacks (overload, notifications) → Learn to disconnect</p>
+          </div>
+        </details>
+        <details class="example">
+          <summary>Example 4 — Social networks &amp; freedom of expression</summary>
+          <div class="inner">
+            <p><strong>Plan:</strong> Voice for minorities → Fake news, filter bubbles → Media literacy education</p>
+          </div>
+        </details>
+        <details class="example">
+          <summary>Example 5 — Foreign accent &amp; integration</summary>
+          <div class="inner">
+            <p><strong>Plan:</strong> Communication barriers → Accent as identity → Intercultural openness</p>
+          </div>
+        </details>
+      </section>
+
+      <section id="ch4">
+        <div class="chapter">
+          <p class="chapter-num">Chapter 4</p>
+          <h2>Self-Evaluation Grid</h2>
+          <p class="sub">Score yourself /5 after each practice session. Target: 4/5 on most criteria.</p>
+        </div>
+        <table>
+          <thead><tr><th>Criterion</th><th>B2 target</th><th>/5</th></tr></thead>
+          <tbody>
+            <tr><td>Monologue coherence</td><td>Clear problem, 3-part plan, transitions</td><td></td></tr>
+            <tr><td>Argumentation</td><td>2–3 developed arguments with examples</td><td></td></tr>
+            <tr><td>Vocabulary</td><td>Variety, idiomatic expressions</td><td></td></tr>
+            <tr><td>Grammar</td><td>Subjunctive, agreements, complex structures</td><td></td></tr>
+            <tr><td>Pronunciation</td><td>Clear, natural, fluent</td><td></td></tr>
+            <tr><td>Interaction</td><td>Relevant, polite, nuanced replies</td><td></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ch5">
+        <div class="chapter">
+          <p class="chapter-num">Chapter 5</p>
+          <h2>Study Plan — 8 to 12 Weeks</h2>
+          <p class="sub">~5–7 hours/week</p>
+        </div>
+        <table>
+          <thead><tr><th>Phase</th><th>Weeks</th><th>Goal</th></tr></thead>
+          <tbody>
+            <tr><td>Discovery</td><td>1–2</td><td>Understand format, read CIEP docs, practice intros</td></tr>
+            <tr><td>Structure</td><td>3–4</td><td>Argumentation, connectors, 5-min speech simulation</td></tr>
+            <tr><td>Fluency</td><td>5–6</td><td>Record &amp; review, partner debate, fix recurring errors</td></tr>
+            <tr><td>Intensive</td><td>7–8</td><td>Full mock exams</td></tr>
+            <tr><td>Final (opt.)</td><td>9–12</td><td>Tutor sessions, stress management, audience simulation</td></tr>
+          </tbody>
+        </table>
+        <div class="box success"><strong>Daily routine (30–60 min)</strong> 10 min listening (news/podcast) · 20–30 min recorded speech · 10 min connectors + self-evaluation</div>
+      </section>
+
+      <section id="ch6">
+        <div class="chapter">
+          <p class="chapter-num">Chapter 6</p>
+          <h2>Annotated Resources</h2>
+        </div>
+        <table>
+          <thead><tr><th>Resource</th><th>Type</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>france-education-international.fr</td><td>Official</td><td>Handbooks, grids, sample topics</td></tr>
+            <tr><td>lillangues.com</td><td>Free blog</td><td>Strategies, phrase lists (2026)</td></tr>
+            <tr><td>communfrancais.com</td><td>Free blog</td><td>Step-by-step models</td></tr>
+            <tr><td>monprojetfrancais.com</td><td>Free blog</td><td>Phrase PDF for speech &amp; debate</td></tr>
+            <tr><td>FUN MOOC DELF B2</td><td>Free course</td><td>fun-mooc.fr — corrected oral topics</td></tr>
+            <tr><td>Italki / Tandem</td><td>Practice</td><td>Speaking with natives or tutors</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <footer class="footer">
+        DELF B2 Oral Production — Study Guide · May 2026 · Based on CIEP official criteria
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
